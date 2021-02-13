@@ -1,0 +1,75 @@
+<html><head>
+<style>
+.invisivel {
+	display: none;
+}
+.highlight {
+  background-color: yellow;
+}
+#container {
+  background-color: grey;
+  height: auto;
+  width: auto;
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center
+}
+
+#container p input section{
+  margin: 0;
+}
+
+#searchContainer {
+  background-color: yellow;
+  height: auto;
+  width: auto;
+  display:  inline-flex;
+  flex-flow: column;
+  /**/
+}
+
+#searchContainer label input p{
+  margin: 0;
+  /**/
+}
+
+h1 {
+  text-align: center;
+}
+
+</style>
+
+</head><body>
+<div id="container">
+  <br>
+  <form onsubmit="controller._cast(event)">
+<textarea cols="50" rows="5" id="input"></textarea>
+<input type="submit" id="registrador">
+</form>
+<h1>REGISTRO</h1>
+<section id="mercurio">
+<p id="gmc">ground mark cardinal</p>
+</section>
+</div>
+<div id="searchContainer">
+<form>
+  <input type="text" id="search">
+</form>
+</div>
+
+<script src="Registro.js"></script>
+<script src="ModeloDeRegistros.js"></script>
+<script src="View.js"></script>
+<script src="RegistroView.js"></script>
+<script src="Controller.js"></script>
+<script src="filtrar.js"></script>
+<script>var controller= new Controller();</script>
+<script>
+/*  let startReg = ["ground mark cardinal"];
+localStorage.setItem("ficheiro",
+JSON.stringify(startReg));
+*/
+controller._getter();controller._updater();
+</script>
+</body></html>
